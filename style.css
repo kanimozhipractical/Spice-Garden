@@ -1,0 +1,874 @@
+/* ========================================
+   SPICE GARDEN RESTAURANT
+   style.css
+======================================== */
+
+
+/* ========================================
+   1. RESET & GENERAL
+======================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    color: #333;
+    background: #ffffff;
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    width: 100%;
+    display: block;
+}
+
+.section {
+    padding: 90px 8%;
+}
+
+
+/* ========================================
+   2. NAVBAR
+======================================== */
+
+.header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100;
+}
+
+.navbar {
+    max-width: 1250px;
+    margin: auto;
+    padding: 25px 30px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    color: white;
+    font-family: "Playfair Display", serif;
+    font-size: 27px;
+    font-weight: 700;
+}
+
+.logo span {
+    font-size: 25px;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 28px;
+}
+
+.nav-links a {
+    color: white;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: #f4b400;
+}
+
+.nav-btn {
+    background: #f4b400;
+    color: #222;
+
+    padding: 11px 20px;
+
+    border-radius: 5px;
+
+    font-size: 14px;
+    font-weight: 600;
+
+    transition: 0.3s;
+}
+
+.nav-btn:hover {
+    background: white;
+}
+
+
+/* ========================================
+   3. HERO SECTION
+======================================== */
+
+.hero {
+    min-height: 100vh;
+
+    background:
+        linear-gradient(
+            rgba(0, 0, 0, 0.65),
+            rgba(0, 0, 0, 0.65)
+        ),
+        url("https://images.unsplash.com/photo-1515003197210-e0cd71810b5f")
+        center/cover no-repeat;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+
+    color: white;
+
+    padding: 100px 20px;
+}
+
+.hero-content {
+    max-width: 800px;
+}
+
+.small-title {
+    color: #f4b400;
+
+    letter-spacing: 4px;
+
+    font-size: 13px;
+
+    font-weight: 600;
+
+    margin-bottom: 15px;
+}
+
+.hero h1 {
+    font-family: "Playfair Display", serif;
+
+    font-size: clamp(45px, 7vw, 80px);
+
+    line-height: 1.1;
+
+    margin-bottom: 25px;
+}
+
+.hero h1 span {
+    color: #f4b400;
+
+    display: block;
+}
+
+.hero p:not(.small-title) {
+    max-width: 650px;
+
+    margin: auto;
+
+    color: #eeeeee;
+
+    font-size: 16px;
+}
+
+.hero-buttons {
+    margin-top: 35px;
+
+    display: flex;
+
+    justify-content: center;
+
+    gap: 15px;
+}
+
+.primary-btn,
+.secondary-btn {
+    padding: 14px 28px;
+
+    border-radius: 5px;
+
+    font-weight: 600;
+
+    transition: 0.3s;
+}
+
+.primary-btn {
+    background: #f4b400;
+
+    color: #222;
+}
+
+.primary-btn:hover {
+    background: white;
+}
+
+.secondary-btn {
+    border: 1px solid white;
+
+    color: white;
+}
+
+.secondary-btn:hover {
+    background: white;
+
+    color: #222;
+}
+
+
+/* ========================================
+   4. SECTION HEADING
+======================================== */
+
+.section-heading {
+    text-align: center;
+
+    margin-bottom: 50px;
+}
+
+.section-label {
+    color: #d99000;
+
+    font-size: 13px;
+
+    font-weight: 700;
+
+    letter-spacing: 3px;
+
+    margin-bottom: 8px;
+}
+
+.section-heading h2,
+.about-content h2,
+.booking-text h2 {
+    font-family: "Playfair Display", serif;
+
+    font-size: 42px;
+
+    color: #222;
+
+    line-height: 1.2;
+}
+
+.section-heading > p:last-child {
+    margin-top: 12px;
+
+    color: #777;
+}
+
+
+/* ========================================
+   5. ABOUT SECTION
+======================================== */
+
+.about {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 70px;
+
+    align-items: center;
+}
+
+.about-image img {
+    height: 550px;
+
+    object-fit: cover;
+
+    border-radius: 8px;
+}
+
+.about-content > p:not(.section-label) {
+    color: #666;
+
+    margin-top: 18px;
+}
+
+.about-features {
+    display: flex;
+
+    gap: 45px;
+
+    margin-top: 35px;
+}
+
+.about-features div {
+    display: flex;
+
+    flex-direction: column;
+}
+
+.about-features strong {
+    color: #d99000;
+
+    font-family: "Playfair Display", serif;
+
+    font-size: 32px;
+}
+
+.about-features span {
+    color: #777;
+
+    font-size: 13px;
+}
+
+
+/* ========================================
+   6. MENU SECTION
+======================================== */
+
+.menu {
+    background: #faf8f3;
+}
+
+.food-container {
+    max-width: 1200px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 28px;
+}
+
+.food-card {
+    background: white;
+
+    border-radius: 8px;
+
+    overflow: hidden;
+
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.07);
+
+    transition: 0.3s;
+}
+
+.food-card:hover {
+    transform: translateY(-8px);
+}
+
+.food-card > img {
+    height: 230px;
+
+    object-fit: cover;
+}
+
+.food-info {
+    padding: 22px;
+}
+
+.food-title {
+    display: flex;
+
+    justify-content: space-between;
+
+    gap: 10px;
+
+    margin-bottom: 10px;
+}
+
+.food-title h3 {
+    font-family: "Playfair Display", serif;
+
+    font-size: 21px;
+}
+
+.food-title span {
+    color: #d99000;
+
+    font-weight: 700;
+}
+
+.food-info p {
+    color: #777;
+
+    font-size: 13px;
+
+    margin-bottom: 18px;
+}
+
+.order-link {
+    color: #c27c00;
+
+    font-size: 14px;
+
+    font-weight: 600;
+}
+
+.order-link:hover {
+    color: #222;
+}
+
+
+/* ========================================
+   7. GALLERY
+======================================== */
+
+.gallery-grid {
+    max-width: 1200px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 15px;
+}
+
+.gallery-grid img {
+    height: 250px;
+
+    object-fit: cover;
+
+    border-radius: 5px;
+
+    transition: 0.3s;
+}
+
+.gallery-grid img:hover {
+    transform: scale(1.03);
+}
+
+
+/* ========================================
+   8. REVIEWS
+======================================== */
+
+.reviews {
+    background: #faf8f3;
+}
+
+.review-container {
+    max-width: 1100px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 25px;
+}
+
+.review-card {
+    background: white;
+
+    padding: 35px 28px;
+
+    text-align: center;
+
+    border-radius: 8px;
+
+    box-shadow:
+        0 5px 20px rgba(0, 0, 0, 0.05);
+}
+
+.stars {
+    color: #f4b400;
+
+    font-size: 20px;
+
+    margin-bottom: 15px;
+}
+
+.review-card p {
+    color: #666;
+
+    font-size: 14px;
+
+    font-style: italic;
+}
+
+.review-card h4 {
+    margin-top: 20px;
+}
+
+
+/* ========================================
+   9. BOOKING SECTION
+======================================== */
+
+.booking {
+    background:
+        linear-gradient(
+            rgba(0, 0, 0, 0.75),
+            rgba(0, 0, 0, 0.75)
+        ),
+        url("https://images.unsplash.com/photo-1517248135467-4c7edcad34c4")
+        center/cover no-repeat;
+
+    color: white;
+}
+
+.booking-content {
+    max-width: 1100px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 70px;
+
+    align-items: center;
+}
+
+.booking-text h2 {
+    color: white;
+}
+
+.booking-text > p:not(.section-label) {
+    color: #ddd;
+
+    margin-top: 20px;
+}
+
+.contact-details {
+    margin-top: 30px;
+}
+
+.contact-details p {
+    margin: 10px 0;
+
+    color: #eee;
+}
+
+
+/* ========================================
+   10. BOOKING FORM
+======================================== */
+
+.booking-form {
+    background: white;
+
+    padding: 30px;
+
+    border-radius: 8px;
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 15px;
+}
+
+.booking-form input,
+.booking-form select,
+.booking-form textarea {
+    width: 100%;
+
+    padding: 13px;
+
+    border: 1px solid #ddd;
+
+    border-radius: 4px;
+
+    font-family: inherit;
+
+    outline: none;
+}
+
+.booking-form input:focus,
+.booking-form select:focus,
+.booking-form textarea:focus {
+    border-color: #d99000;
+}
+
+.booking-form textarea {
+    grid-column: 1 / -1;
+
+    height: 100px;
+
+    resize: vertical;
+}
+
+.booking-form button {
+    grid-column: 1 / -1;
+
+    border: none;
+
+    background: #f4b400;
+
+    color: #222;
+
+    padding: 14px;
+
+    border-radius: 4px;
+
+    font-size: 15px;
+
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.booking-form button:hover {
+    background: #d99000;
+
+    color: white;
+}
+
+
+/* ========================================
+   11. CONTACT SECTION
+======================================== */
+
+.contact-container {
+    max-width: 1100px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 20px;
+}
+
+.contact-box {
+    text-align: center;
+
+    padding: 30px 15px;
+
+    border: 1px solid #eee;
+
+    border-radius: 7px;
+
+    transition: 0.3s;
+}
+
+.contact-box:hover {
+    transform: translateY(-5px);
+
+    box-shadow:
+        0 10px 25px rgba(0, 0, 0, 0.08);
+}
+
+.contact-icon {
+    font-size: 30px;
+
+    margin-bottom: 12px;
+}
+
+.contact-box h3 {
+    font-family: "Playfair Display", serif;
+
+    margin-bottom: 8px;
+}
+
+.contact-box p {
+    color: #777;
+
+    font-size: 13px;
+}
+
+
+/* ========================================
+   12. FOOTER
+======================================== */
+
+.footer {
+    background: #181818;
+
+    color: white;
+
+    padding: 60px 8% 20px;
+}
+
+.footer-content {
+    max-width: 1100px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns: 2fr 1fr 1fr;
+
+    gap: 50px;
+}
+
+.footer h2,
+.footer h3 {
+    font-family: "Playfair Display", serif;
+}
+
+.footer-brand p {
+    color: #aaa;
+
+    margin-top: 12px;
+
+    max-width: 350px;
+}
+
+.footer-links,
+.footer-social {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 8px;
+}
+
+.footer-links a,
+.footer-social p {
+    color: #aaa;
+
+    font-size: 14px;
+}
+
+.footer-links a:hover {
+    color: #f4b400;
+}
+
+.copyright {
+    max-width: 1100px;
+
+    margin: 45px auto 0;
+
+    padding-top: 20px;
+
+    border-top: 1px solid #333;
+
+    text-align: center;
+}
+
+.copyright p {
+    color: #777;
+
+    font-size: 13px;
+}
+
+
+/* ========================================
+   13. TABLET RESPONSIVE
+======================================== */
+
+@media (max-width: 900px) {
+
+    .nav-links {
+        display: none;
+    }
+
+    .about {
+        grid-template-columns: 1fr;
+    }
+
+    .food-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .review-container {
+        grid-template-columns: 1fr;
+    }
+
+    .booking-content {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .footer-content {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+
+/* ========================================
+   14. MOBILE RESPONSIVE
+======================================== */
+
+@media (max-width: 600px) {
+
+    .section {
+        padding: 65px 5%;
+    }
+
+    .navbar {
+        padding: 20px;
+    }
+
+    .logo {
+        font-size: 21px;
+    }
+
+    .nav-btn {
+        padding: 9px 13px;
+
+        font-size: 12px;
+    }
+
+    .hero h1 {
+        font-size: 43px;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+
+        max-width: 220px;
+
+        margin: 30px auto 0;
+    }
+
+    .about-image img {
+        height: 350px;
+    }
+
+    .section-heading h2,
+    .about-content h2,
+    .booking-text h2 {
+        font-size: 32px;
+    }
+
+    .about-features {
+        gap: 20px;
+    }
+
+    .about-features strong {
+        font-size: 25px;
+    }
+
+    .food-container {
+        grid-template-columns: 1fr;
+    }
+
+    .gallery-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .gallery-grid img {
+        height: 230px;
+    }
+
+    .booking-form {
+        grid-template-columns: 1fr;
+    }
+
+    .booking-form textarea,
+    .booking-form button {
+        grid-column: auto;
+    }
+
+    .contact-container {
+        grid-template-columns: 1fr;
+    }
+
+    .footer-content {
+        grid-template-columns: 1fr;
+    }
+}
